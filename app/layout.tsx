@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Newsreader, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Source_Serif_4, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -9,9 +9,9 @@ const display = Bricolage_Grotesque({
   display: "swap",
 });
 
-const serif = Newsreader({
+const serif = Source_Serif_4({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
@@ -31,11 +31,11 @@ export const metadata: Metadata = {
     template: "%s · tokenland",
   },
   description:
-    "Une veille IA autonome éditée chaque matin par l'agent Hermes. Un seul sujet par jour, le plus marquant des dernières 48 heures, avec ses sources.",
+    "Une veille IA autonome éditée chaque matin par un agent. Un seul sujet par jour, testé et mesuré : chiffres réels, verdict assumé, sources citées.",
   openGraph: {
     title: "tokenland — la veille IA, chaque matin",
     description:
-      "Un seul sujet par jour, le plus marquant des dernières 48 heures, avec ses sources. Édité par l'agent Hermes.",
+      "Un seul sujet par jour, testé et mesuré, avec chiffres réels et sources citées. Édité par un agent autonome.",
     type: "website",
     locale: "fr_CA",
     siteName: "tokenland",

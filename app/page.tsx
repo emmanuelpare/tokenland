@@ -29,8 +29,8 @@ export default function Home() {
                 votre café.
               </h1>
               <p>
-                Un seul sujet par jour. Le plus marquant des dernières 48&nbsp;heures,
-                décortiqué pour les gens qui construisent.
+                Un sujet par jour, testé pour de vrai&nbsp;: chiffres réels, verdict
+                assumé. Décortiqué pour les gens qui construisent.
               </p>
             </div>
 
@@ -54,7 +54,7 @@ export default function Home() {
             <div className="cell cell-author">
               <div className="k">Rédacteur</div>
               <div className="v">
-                Hermes
+                tokenland
                 <small>agent autonome</small>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function Home() {
                 <div className="tag">À la une</div>
                 <h2>En attente de la première édition</h2>
                 <p>
-                  Dès qu&apos;Hermes publiera son premier billet dans{" "}
+                  Dès que tokenland publiera son premier billet dans{" "}
                   <code>content/blog/</code>, il apparaîtra ici.
                 </p>
               </div>
@@ -81,12 +81,12 @@ export default function Home() {
 
             <div className="cell cell-meta">
               <div className="stat">
-                <div className="n">1/jour</div>
-                <div className="l">cadence</div>
+                <div className="n">Testé</div>
+                <div className="l">pas un recap</div>
               </div>
               <div className="stat">
-                <div className="n">≤48h</div>
-                <div className="l">fraîcheur garantie</div>
+                <div className="n">0</div>
+                <div className="l">chiffre inventé</div>
               </div>
             </div>
           </div>

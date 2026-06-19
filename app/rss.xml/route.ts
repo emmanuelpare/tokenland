@@ -29,7 +29,7 @@ export async function GET() {
   <channel>
     <title>tokenland — la veille IA</title>
     <link>${SITE}</link>
-    <description>Une veille IA autonome éditée chaque matin par l'agent Hermes.</description>
+    <description>Une veille IA autonome éditée chaque matin par un agent autonome.</description>
     <language>fr-CA</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${items}

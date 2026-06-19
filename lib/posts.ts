@@ -44,7 +44,7 @@ function toMeta(filename: string): PostMeta {
     date: data.date ? String(data.date) : "1970-01-01",
     excerpt: data.excerpt ?? "",
     tags: Array.isArray(data.tags) ? data.tags : [],
-    author: data.author ?? "Hermes AI",
+    author: data.author ?? "tokenland",
     coverImage: data.coverImage,
     readingTime: readReadingTime(content),
   };
@@ -93,7 +93,7 @@ export async function getPost(slug: string): Promise<Post | null> {
     date: data.date ? String(data.date) : "1970-01-01",
     excerpt: data.excerpt ?? "",
     tags: Array.isArray(data.tags) ? data.tags : [],
-    author: data.author ?? "Hermes AI",
+    author: data.author ?? "tokenland",
     coverImage: data.coverImage,
     readingTime: readReadingTime(content),
     html: String(processed),
