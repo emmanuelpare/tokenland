@@ -6,6 +6,7 @@
   --bone: #efeadd;
   --mist: #93a8b0;
   --ember: #e8602c;
+  --ember-bright: #f4753b;
   --ember-dim: #c44e20;
   --red: #c8402f;
   --blue: #2b5c9c;
@@ -26,6 +27,7 @@ body {
   font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
@@ -62,11 +64,11 @@ a { color: inherit; text-decoration: none; }
 /* ---------------- hero / mondrian composition ---------------- */
 .hero { padding: 54px 0 60px; }
 .eyebrow {
-  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--ember); margin-bottom: 22px;
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--ember-bright); margin-bottom: 22px;
   display: flex; align-items: center; gap: 12px;
 }
-.eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--ember); }
+.eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--ember-bright); }
 
 .composition {
   display: grid;
@@ -106,11 +108,11 @@ a { color: inherit; text-decoration: none; }
 .cell-author .v small { display: block; font-family: var(--mono); font-weight: 400; font-size: 0.66rem; letter-spacing: 0.1em; color: var(--mist); text-transform: uppercase; margin-top: 6px; }
 
 .cell-feature { grid-column: 1 / 3; grid-row: 2; background: var(--teal-900); display: flex; flex-direction: column; justify-content: center; gap: 14px; }
-.cell-feature .tag { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember); }
+.cell-feature .tag { font-family: var(--mono); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ember-bright); }
 .cell-feature h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.5rem, 2.6vw, 2.05rem); line-height: 1.05; letter-spacing: -0.02em; }
 .cell-feature p { color: var(--mist); font-size: 1rem; max-width: 52ch; }
-.cell-feature .read { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bone); display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; }
-.cell-feature .read .arr { color: var(--ember); transition: transform 0.2s; }
+.cell-feature .read { font-family: var(--mono); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bone); display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; }
+.cell-feature .read .arr { color: var(--ember-bright); transition: transform 0.2s; }
 .cell-feature:hover .read .arr { transform: translateX(5px); }
 .cell-meta { grid-column: 3; grid-row: 2; background: var(--teal-800); display: flex; flex-direction: column; justify-content: center; gap: 18px; }
 .cell-meta .stat .n { font-family: var(--display); font-weight: 800; font-size: 2.1rem; letter-spacing: -0.03em; line-height: 1; }
@@ -139,7 +141,7 @@ a { color: inherit; text-decoration: none; }
 /* ---------------- article ---------------- */
 .article { padding: 48px 0 30px; }
 .back { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); display: inline-flex; gap: 8px; transition: color 0.2s; }
-.back:hover { color: var(--ember); }
+.back:hover { color: var(--ember-bright); }
 .article-head { border-top: 5px solid var(--line); border-bottom: 1px solid var(--line); padding: 36px 0 34px; margin-top: 22px; }
 .article-meta { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .article-meta .sep { width: 4px; height: 4px; background: var(--ember); }
@@ -216,3 +218,22 @@ a { color: inherit; text-decoration: none; }
   .foot .meta { text-align: left; }
   .prose { font-size: 1.08rem; }
 }
+
+/* ============================================================
+   Lisibilité — étiquettes mono (Fix A)
+   Plancher 12px + graisse renforcée pour les micro-libellés
+   sur fond sombre. La teinte des labels orange est éclaircie
+   via --ember-bright dans les règles ci-dessus.
+   ============================================================ */
+.cell-author .k, .cell-author .v small, .cell-meta .stat .l,
+.card .date, .card .tags span, .section-head .count,
+.article-meta, .byline, .nav-links a, .back,
+.article-foot .tags span, .foot .meta, .lineage {
+  font-weight: 500;
+}
+.card .tags span { font-size: 0.72rem; letter-spacing: 0.06em; }
+.cell-meta .stat .l { font-size: 0.7rem; letter-spacing: 0.1em; }
+.cell-author .v small { font-size: 0.7rem; }
+.cell-author .k { letter-spacing: 0.12em; }
+.article-foot .tags span { font-size: 0.7rem; }
+.lineage { font-size: 0.72rem; letter-spacing: 0.1em; }
