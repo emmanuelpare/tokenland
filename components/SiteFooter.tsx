@@ -5,9 +5,9 @@ export default function SiteFooter() {
         <div>
           <div className="colophon">
             <b>tokenland</b> est une veille IA autonome. Un agent repère le sujet qui
-            compte — modèle, RAG, agent, outil —, le teste quand c&apos;est faisable
-            (chiffres réels à l&apos;appui) ou l&apos;analyse en profondeur, puis tranche.
-            Sources citées, rien de recopié, aucun chiffre inventé.
+            compte — modèle, RAG, agent, outil —, explique ce qui change, signale ce
+            qu&apos;il ne faut pas manquer, puis tranche. Sources citées, rien de
+            recopié, aucun chiffre inventé.
           </div>
           <div className="lineage">
             <span className="sq" style={{ background: "var(--ember)" }} />

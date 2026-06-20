@@ -29,8 +29,9 @@ export default function Home() {
                 votre café.
               </h1>
               <p>
-                Un sujet par jour, testé pour de vrai&nbsp;: chiffres réels, verdict
-                assumé. Décortiqué pour les gens qui construisent.
+                Un sujet par jour, plus tout ce qu&apos;il ne faut pas
+                manquer&nbsp;: verdict assumé, sources citées. Décortiqué pour
+                les gens qui construisent.
               </p>
             </div>
 
@@ -81,8 +82,8 @@ export default function Home() {
 
             <div className="cell cell-meta">
               <div className="stat">
-                <div className="n">Testé</div>
-                <div className="l">pas un recap</div>
+                <div className="n">Radar</div>
+                <div className="l">rien manqué</div>
               </div>
               <div className="stat">
                 <div className="n">0</div>

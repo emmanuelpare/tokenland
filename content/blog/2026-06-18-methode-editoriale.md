@@ -1,70 +1,69 @@
 ---
 title: "La méthode éditoriale derrière chaque billet"
 date: "2026-06-18"
-excerpt: "Repérer un sujet, le faire tourner soi-même, mesurer, puis trancher. Le pipeline complet — de la veille multi-sources au banc d'essai local sur Apple Silicon."
+excerpt: "Repérer ce qui trend, choisir l'incontournable, vérifier les faits, puis trancher. Le pipeline complet — de la veille multi-sources au verdict — pour que vous ne manquiez rien."
 tags: ["méthode", "veille", "sourçage"]
 author: "tokenland"
 ---
 
 ## TL;DR
 
-- Le pipeline tient en quatre temps : **repérer, choisir, tester, écrire.**
-- Le **test est le cœur** : quand c'est faisable, on fait tourner la chose et on rapporte *nos* chiffres.
-- La fraîcheur donne un bonus, jamais un plafond : on privilégie la profondeur à la course à l'actualité.
+- Le pipeline tient en quatre temps : **repérer, choisir, vérifier, trancher.**
+- La promesse est simple : **lisez le billet du jour et vous n'aurez rien manqué d'important** — un sujet vedette, plus une section « Sur le radar ».
+- Chiffres réels et attribués uniquement, jamais inventés ; sources citées, rien de recopié.
 
-## On repère ce qui mérite un test
+## On repère ce qui trend maintenant
 
-La veille n'a qu'un but : dresser une liste de huit à quinze candidats récents, chacun assorti d'une note rapide — **testable comment ?** (modèle *open-weights* en local, API, ou analyse seulement). On croise des canaux qui se trompent rarement en même temps :
+La veille n'a qu'un but : dresser une liste de huit à quinze candidats récents, chacun assorti de sa date et d'un signal d'engagement. On croise des canaux qui se trompent rarement en même temps :
 
-- **Communautés de praticiens** — Hacker News (API Algolia, triée par date et points) et Reddit. r/LocalLLaMA est la source no 1 pour les sujets testables en local.
-- **Plateformes de modèles** — Hugging Face : modèles *trending* et *daily papers*. Pour chaque modèle candidat, on vérifie tout de suite s'il existe en **GGUF** (donc quantifiable et exécutable sur le Mac).
+- **Communautés de praticiens** — Hacker News (API Algolia, triée par date et points) et Reddit. r/LocalLLaMA reste le baromètre des modèles locaux qui font fureur.
+- **Plateformes de modèles** — Hugging Face : modèles *trending* et *daily papers*.
 - **Outils qui décollent** — GitHub Trending sur les *topics* `llm`, `rag` et `ai-agents`.
-- **Thermomètres médias** — Techmeme, Smol AI, MarkTechPost, TLDR AI, VentureBeat.
+- **Thermomètres médias** — Techmeme (qui regroupe une story avec la liste des médias qui la couvrent), Smol AI, MarkTechPost, TLDR AI, VentureBeat.
 - **Sources officielles** — les blogues des laboratoires (OpenAI, Anthropic, DeepMind, Meta, Mistral, Qwen, DeepSeek) et des frameworks (LangChain et LangGraph, LlamaIndex, vLLM, Ollama).
 
-La fenêtre visée est d'environ sept jours — assez large pour ne pas écarter un sujet qui mérite enfin un vrai test. Le *buzz* sert à **repérer**, pas à décider.
+La fenêtre visée est d'environ sept jours, avec une préférence marquée pour ce qui a moins de 72 heures — on parle de tendances. À ce stade, on ne lit pas en profondeur : le *buzz* sert à **repérer**, pas à décider.
 
-## On choisit ce qu'on peut creuser
+## On choisit LE sujet incontournable
 
-Sur dix candidats, neuf seront écartés. Le critère décisif n'est pas « de quoi parle-t-on le plus ? » mais « qu'est-ce qu'on peut **tester ou analyser en profondeur** ? ». Le score favorise explicitement la testabilité :
+Sur dix candidats, neuf seront écartés. Le critère décisif n'est pas « de quoi parle-t-on le plus ? » mais **« est-ce qu'un développeur IA qui rate ça serait hors du coup ? »**. Le score favorise ce qui compte vraiment :
 
-- un modèle **exécutable en local** sur le Mac (M5, 48 Go) reçoit le plus gros bonus ;
-- un sujet **mesurable via API** (latence, coût, qualité) vient ensuite ;
-- puis tout ce qui offre de la matière pour une analyse originale — un repo, une méthode, des specs détaillées.
+- un sujet **incontournable** pour un dev reçoit le plus gros bonus ;
+- vient ensuite la **convergence** : couvert par plusieurs médias et communautés indépendants, présent à la fois sur Hacker News et Reddit ;
+- puis l'**engagement chiffré** (points HN, *upvotes*, étoiles GitHub gagnées sur sept jours) et l'**annonce officielle** d'un acteur majeur.
 
-La fraîcheur ajoute quelques points, l'engagement chiffré aussi, mais aucun des deux ne suffit à lui seul. Un sujet testable mais moins « chaud » bat un sujet médiatisé mais creux. À score égal, on tranche selon l'ordre du périmètre éditorial.
+La fraîcheur ajoute quelques points, mais ne suffit jamais à elle seule. La règle ne plie pas : le sujet vedette doit reposer sur **au moins deux sources indépendantes dans la fenêtre**, ou sur une annonce officielle majeure déjà reprise. À score égal, on tranche selon l'ordre du périmètre éditorial. Les trois à cinq candidats suivants ne sont pas perdus : ils alimentent la section « Sur le radar ».
 
-## On teste pour de vrai
+## On vérifie avant d'écrire
 
-C'est l'étape qui sépare nos billets d'un résumé d'annonce. Quand le sujet s'y prête, on le fait tourner et on rapporte des chiffres mesurés, pas rapportés.
+C'est l'étape qui sépare nos billets d'un agrégateur pressé : avant d'affirmer quoi que ce soit, on confirme. Trois à cinq recherches ciblées sur le sujet vedette, en visant la justesse plutôt que l'exhaustivité :
 
-**Un modèle open-weights**, sur le banc d'essai local (Apple Silicon M5, 48 Go de mémoire unifiée). Avec Ollama ou llama.cpp, on relève le débit réel — *tokens/s* en génération comme en traitement du *prompt* —, l'**empreinte mémoire** effective, et la qualité subjective sur quelques tâches (raisonnement, code, suivi d'instructions). Quand c'est pertinent, on compare deux *quantizations* (par exemple IQ4_XS contre Q4_K_S) pour situer le compromis débit / qualité / mémoire sur 48 Go.
+- la **source primaire** officielle (annonce, repo, docs), avec une vérification de la date au *timestamp* réel — jamais au titre ni à la position dans un fil ;
+- les **chiffres et benchmarks publiés** qui comptent (perf, prix, disponibilité, *context window*), généraux et correctement attribués ;
+- la **réaction de la communauté**, paraphrasée et sourcée ;
+- le **contexte de comparaison** — face à la génération précédente ou au concurrent direct.
 
-**Un modèle propriétaire ou un produit SaaS**, via API : on mesure la latence (temps jusqu'au premier *token* et durée totale), le coût par millier de *tokens*, et la qualité sur deux ou trois tâches réelles standardisées.
+Pour chaque item du radar, un fetch rapide suffit : confirmer le quoi, récupérer un lien propre. On reste technique mais accessible : assez de détail pour être utile, **jamais de micro-détail ni de plongée d'architecture**.
 
-**Une technique de RAG ou un framework agentique** : on monte un mini-protocole reproductible — un petit jeu de documents, une métrique simple (*recall*, exactitude, nombre d'étapes ou de boucles, latence) — et on publie les chiffres.
+## On écrit : un verdict, pas un résumé
 
-Et quand le test est **infaisable** — modèle trop gros pour 48 Go, poids non diffusés, pas d'accès API —, on le dit franchement. On s'appuie alors sur les *benchmarks* publiés en les **analysant de façon critique** (méthodologie, biais, ce qui manque) et on compense par la profondeur d'analyse. Jamais on ne présente un chiffre publié comme une mesure maison, ni on n'invente un résultat « comme si » on avait testé.
+La forme suit la substance — pas de gabarit rigide —, mais quelques sections ne se négocient pas : le **TL;DR** en tête (quoi + pourquoi ça compte, en un coup d'œil), le **verdict** à la fin (ça vaut le coup d'œil ou non, et pour qui), et la section **« Sur le radar »** : trois à cinq autres trucs qui trendent cette semaine, une ligne et un lien chacun. C'est elle qui garantit le « rien manqué ».
 
-## On écrit : des mesures et un verdict
-
-La forme suit la substance — pas de gabarit rigide —, mais deux sections sont obligatoires : le **TL;DR** en tête (avec le chiffre marquant qu'on a mesuré) et le **verdict** à la fin (quand utiliser, quand éviter, les pièges, le rapport coût / bénéfice). Entre les deux, on choisit les sections selon ce qu'on a réellement à dire, et la section « nos mesures » est la vedette quand un test a été fait.
-
-L'article fait de 900 à 1400 mots, en **français canadien** soutenu, sur un ton de praticien-reporter : opinion assumée, jamais de prose neutre qui sonne comme un communiqué. On distingue toujours **nos mesures** (« sur le M5… ») des **chiffres rapportés** (« selon l'annonce… »). Les termes que les développeurs nomment en anglais restent en anglais (*tokens/s*, *quantization*, *throughput*, *fine-tuning*, *embeddings*). Trois règles ne se négocient pas : rien de recopié, aucun chiffre inventé, au moins trois références cliquables.
+L'article fait de 800 à 1200 mots, en **français canadien** soutenu, sur un ton de curateur-reporter : opinion assumée, jamais de prose neutre qui sonne comme un communiqué. On reste sur les faits, les capacités et les résultats — pas de débat philosophique ni de spéculation sur l'AGI. Les termes que les développeurs nomment en anglais restent en anglais (*context window*, *fine-tuning*, *embeddings*, *reranking*, *throughput*, *open-weights*). Trois règles ne plient pas : rien de recopié, aucun chiffre inventé, au moins trois références cliquables.
 
 ## On publie sans intermédiaire
 
 L'article est un fichier markdown ajouté au dépôt : un *commit*, une poussée, et **Vercel reconstruit** le site automatiquement. La tuyauterie complète est décrite dans [le colophon](/blog/2026-06-16-colophon).
 
-> Une bonne veille ne vous dit pas seulement ce qui est sorti. Elle l'a essayé, vous donne les chiffres et leurs sources, et tranche.
+> Une bonne veille ne vous dit pas seulement ce qui est sorti. Elle vous dit ce qui compte, à qui ça sert et pourquoi — sources à l'appui —, et elle tranche.
 
 ## Ce qu'on ne fait jamais
 
-- Produire un recap : sans mesure, sans *snippet* ni verdict, le sujet n'est pas mûr — on en choisit un autre ou on saute le jour.
-- Inventer un chiffre, ou présenter un *benchmark* publié comme une mesure personnelle.
+- Passer à côté de l'évident : si un gros sujet trend partout, il est au moins « Sur le radar ».
+- Inventer un chiffre, ou présenter une donnée non vérifiée comme un fait établi — en cas de doute, on l'omet.
 - Recopier une source : on reformule et on attribue.
 - Se fier au titre ou à la position dans un fil pour juger la date — on vérifie le *timestamp* réel.
-- Traiter un paper arXiv isolé comme une actualité tant qu'il n'est ni repris ni implémentable.
+- Se perdre dans le micro-détail ou partir en débat philosophique au lieu d'expliquer l'essentiel.
 
 ## Références
 

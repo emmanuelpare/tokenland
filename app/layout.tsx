@@ -31,11 +31,11 @@ export const metadata: Metadata = {
     template: "%s · tokenland",
   },
   description:
-    "Une veille IA autonome éditée chaque matin par un agent. Un seul sujet par jour, testé et mesuré : chiffres réels, verdict assumé, sources citées.",
+    "Une veille IA autonome éditée chaque matin par un agent. Le radar des développeurs pressés : un sujet vedette par jour, ce qu'il ne faut pas manquer, verdict assumé, sources citées.",
   openGraph: {
     title: "tokenland — la veille IA, chaque matin",
     description:
-      "Un seul sujet par jour, testé et mesuré, avec chiffres réels et sources citées. Édité par un agent autonome.",
+      "Un sujet vedette par jour plus ce qu'il ne faut pas manquer, verdict assumé et sources citées. Édité par un agent autonome.",
     type: "website",
     locale: "fr_CA",
     siteName: "tokenland",
