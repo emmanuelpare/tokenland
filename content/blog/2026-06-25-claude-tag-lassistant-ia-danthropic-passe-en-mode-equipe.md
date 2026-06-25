@@ -45,3 +45,19 @@ Claude Tag représente une évolution pratique et immédiatement utile pour les 
 2. Hacker News, « Mistral OCR 4 », 23 juin 2026, <https://news.ycombinator.com/item?id=48645152>.
 3. Hacker News, « Anthropic says Alibaba illicitly extracted Claude AI model capabilities », 24 juin 2026, <https://news.ycombinator.com/item?id=48664814>.
 4. Hacker News, « Show HN: TikZ Editor – WYSIWYG editor for figures in LaTeX », 23 juin 2026, <https://news.ycombinator.com/item?id=48645437>.
+## Ce qu’en dit la communauté
+Sur Hacker News, l’annonce a généré plus de 260 points et de nombreux commentaires soulignant l’aspect « agent » de Claude Tag : « Enfin un modèle qui ne se contente pas de répondre, mais qui agit » et des interrogations sur la gestion des quotas et des coûts lorsqu’on fait tourner plusieurs Claude en parallèle. Les retours sont globalement positifs, notamment de la part d’équipes qui cherchent à réduire les tâches répétitives.
+
+## À retenir / verdict
+Claude Tag représente une évolution pratique et immédiatement utile pour les équipes de développement qui utilisent déjà Claude Code. Si vous travaillez dans un environnement où la séparation des responsabilités et l’automatisation sont essentielles, cet outil vaut clairement le détour. Pour les utilisateurs solitaires, l’intérêt est moindre, mais la possibilité de créer des « personas » spécialisés reste une idée séduisante.
+
+## Sur le radar
+- **Mistral OCR 4** – nouveau modèle d’OCR open‑source de Mistral, affichant une précision de pointe sur les reçus et les tableaux, déjà adopté par plusieurs startups de la fintech (496 points sur Hacker News, 23 juin) [[news.ycombinator.com/item?id=48645152]].
+- **Anthropic allègue qu’Alibaba a extrait illicitement des capacités du modèle Claude** – une allégation de vol de propriété intellectuelle qui fait débat sur la protection des modèles d’IA propriétaires (556 points sur Hacker News, 24 juin) [[news.ycombinator.com/item?id=48664814]].
+- **Éditeur TikZ basé sur Codex** – un éditeur WYSIWYG pour LaTeX/TikZ entièrement généré par l’agent Codex d’OpenAI, montrant la puissance des assistants de codage pour créer des outils de niche (442 points sur Hacker News, 23 juin) [[news.ycombinator.com/item?id=48645437]].
+
+## Références
+1. Anthropic, « Introducing Claude Tag », 23 juin 2026, <https://www.anthropic.com/news/introducing-claude-tag>.
+2. Hacker News, « Mistral OCR 4 », 23 juin 2026, <https://news.ycombinator.com/item?id=48645152>.
+3. Hacker News, « Anthropic says Alibaba illicitly extracted Claude AI model capabilities », 24 juin 2026, <https://news.ycombinator.com/item?id=48664814>.
+4. Hacker News, « Show HN: TikZ Editor – WYSIWYG editor for figures in LaTeX », 23 juin 2026, <https://news.ycombinator.com/item?id=48645437>.
