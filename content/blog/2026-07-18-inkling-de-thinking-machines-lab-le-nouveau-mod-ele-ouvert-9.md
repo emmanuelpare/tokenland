@@ -33,6 +33,9 @@ Inkling représente une étape importante pour le développement d'IA ouverte et
 - **ARC Prize : Classement ARC-AGI-2** – Voici où Inkling se positionne parmi les autres modèles ouverts et fermés sur le défi de raisonnement abstrait ARC-AGI-2. [https://arcprize.org/leaderboard](https://arcprize.org/leaderboard)
 - **TechCrunch : Analyse de la sortie d'Inkling** – L'article original de TechCrunch détaillant la publication d'Inkling et ses implications pour le marché de l'IA d'entreprise. [https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/](https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/)
 
+
+
+De plus, son efficacité en termes de consommation d’énergie et de latence peut entraîner des économies significatives d’infrastructure à l’échelle, ce qui est de plus en plus critique alors que les coûts de calcul continuent d’augmenter avec la taille des modèles. Enfin, l’approche ouverte favorise une écosystémique d’outils et de bonnes pratiques autour du fine-tuning et du partage de modèles personnalisés, bien que cela nécessite une gouvernance appropriée.
 ## Références
 1. TechCrunch. « Thinking Machines amps up its bet against one-size-fits-all AI with its first open model, Inkling ». 15 juillet 2026. [https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/](https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/)
 2. ARC Prize. « Inkling - ARC-AGI Results ». 17 juillet 2026. [https://arcprize.org/results/thinky-inkling](https://arcprize.org/results/thinky-inkling)
