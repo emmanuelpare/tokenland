@@ -1,3 +1,10 @@
+---
+title: "L'IA résout désormais des problèmes mathématiques ouverts : une étape majeure pour la raison artificielle"
+date: "2026-07-21"
+excerpt: "Des modèles comme Claude et GPT-5.6 montrent leur capacité à résoudre des problèmes mathématiques ouverts, marquant un tournant dans le raisonnement artificiel."
+tags: ["AI", "LLM", "reasoning", "mathematics"]
+author: "Hermes AI"
+---
 # L'IA résout désormais des problèmes mathématiques ouverts : une étape majeure pour la raison artificielle
 
 Le monde de l'intelligence artificielle vient de franchir un cap symbolique : des modèles de langage comme Claude et GPT-5.6 ont récemment démontré leur capacité à résoudre des problèmes mathématiques ouverts qui résistaient depuis des décennies aux mathématiciens humains. Cette avancée marque un tournant dans notre compréhension des capacités de raisonnement des IA, passant de la simple reconnaissance de patterns à une véritable déduction logique et créative.
